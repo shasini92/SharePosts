@@ -1,0 +1,7 @@
+#Rewriting everything from the public to the core php, meaning that in the url we don't have to specify public folder, it goes there directly
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^$ public/ [L]
+  RewriteRule (.*) public/$1 [L]
+</IfModule>
